@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GVR4UR</title>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style type="text/css">
+		.waves-effect.waves-blue .waves-ripple {
+			background-color: rgba(33, 150, 243, 0.65);
+		}
+		.container {
+			width: 85%;
+			margin: 0 auto;
+		}
+		main {
+			padding-left: 300px;
+			color: #2196F3;
+			font-size: 16px;
+		}
+		.noselect {
+		  -webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Chrome/Safari/Opera */
+			 -khtml-user-select: none; /* Konqueror */
+			   -moz-user-select: none; /* Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+					user-select: none; /* Non-prefixed version, currently
+										  not supported by any browser */
+		}
+		</style>
+	</head>
+	<body>
+		<ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
+			<li class="logo"><a id="logo-container" href="https://nesrak1.github.io/gvr4ur/" class="brand-logo">
+				GVR4UR Docs
+			</a></li>
+			
+			<div class="divider"></div>
+			
+			<li class="bold"><a href="plugin.html" class="waves-effect waves-blue">Setting up the plugin</a></li>
+			<li class="bold"><a href="project.html" class="waves-effect waves-blue">Setting up the project</a></li>
+			<li class="bold"><a href="pointer.html" class="waves-effect waves-blue">Controller: Basic pointer</a></li>
+			<li class="bold"><a href="controls.html" class="waves-effect waves-blue">Controller: Controls</a></li>
+			<li class="bold"><a href="pttp.html" class="waves-effect waves-blue">Controller Example: PTTP</a></li>
+			<li class="bold"><a href="fps.html" class="waves-effect waves-blue">Controller Example: FPS</a></li>
+			<li class="bold"><a href="other.html" class="waves-effect waves-blue">Other things</a></li>
+		</ul>
+		<header>
+		<nav>
+			<div class="nav-wrapper blue" style="height: 78px; padding-top: 8px;">
+				<a class="brand-logo center noselect" style="font-size: 42px; cursor: default;">Google VR for Unreal Docs</a>
+			</div>
+		</nav>
+		</header>
+		
+		<main>
+			<div class="container">
+				<h2 class="header">Rebuilding the plugin</h2>
+				Google has their own branch of the unreal engine in 4.13. It currently contains updated versions of the Google VR plugin. To use the pointer, we must use that version. We are currently at version 4.14, and later 4.15. Instead of waiting hours to compile (depending on your computer) and trying to update the branch, we can just update the plugin.<br/><br/>
+				<div class="divider"></div><br/>
+				1. Make sure you have Github linked with Unreal and <a href="https://github.com/googlevr-unreal/UnrealEngine/tree/4.13-googlevr">download Google's branch of Unreal.</a>
+				<img src="img/plugin_screenshot1.png" style="width: 100%" /><br/>
+				2. Create a new empty C++ project in Unreal.<br/>
+				<img src="img/plugin_screenshot2.png" style="width: 100%" /><br/>
+				3. Open the zip and go to Engine/Plugins/Runtime/GoogleVR<br/>
+				<img src="img/plugin_screenshot3.png" style="width: 100%" /><br/>
+				4. Copy the GoogleVRController folder into the Plugins folder of your project.<br/>
+				<span class="orange-text">Note: If a Plugins folder does not exist, create it.</span><br/>
+				<img src="img/plugin_screenshot4.png" style="width: 100%" /><br/>
+				5. Open Visual Studio and build the project.<br/>
+				<span class="orange-text">Note: If the Plugins folder is not showing in Visual Studio, you may need to Rescan Solution and/or restart VS/Unreal</span><br/>
+				<img src="img/plugin_screenshot5.png" style="width: 100%" /><br/>
+				<div class="divider"></div><br/>
+				<span style="font-size: 22px;">Congrats! You have compiled the plugin!</span><br/>
+				<a class="waves-effect waves-light btn blue" href="project.html">Move on to the next tutorial</a><br/><br/><br/>
+			</div>
+		</main>
+		
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+	</body>
+</html>
