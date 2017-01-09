@@ -46,11 +46,11 @@
 			<li class="bold"><a href="other.html" class="waves-effect waves-blue">Other things</a></li>
 		</ul>
 		<header>
-		<nav>
-			<div class="nav-wrapper blue" style="height: 78px; padding-top: 8px;">
-				<a class="brand-logo center noselect" style="font-size: 42px; cursor: default;">Google VR for Unreal Docs</a>
-			</div>
-		</nav>
+			<nav>
+				<div class="nav-wrapper blue" style="height: 78px; padding-top: 8px;">
+					<a class="brand-logo center noselect" style="font-size: 42px; cursor: default;">Google VR for Unreal Docs</a>
+				</div>
+			</nav>
 		</header>
 		
 		<main>
@@ -58,12 +58,56 @@
 				<h2 class="header">Setting up the project</h2>
 				Here we will setup the project.<br/>
 				<div class="divider"></div><br/>
-				1. Install Nividia
-				
-				1. Create a new Blueprint project with mobile/scalable/no starter content.<br/>
+				<h4 class="header">Part 1: Installing Android tools</h4>
+				1. Install CodeWorks. You can find it in Epic Games/4.14/Engine/Extras/AndroidWorks/Win64<br/>
 				<img src="img/project_screenshot1.png" style="width: 100%" /><br/>
-				2. Create a folder called "Blueprints" and a new blueprint named "VRPawn".<br/>
+				2. Press next through all of the dialogs until you get a screen like below. Leave the defaults and install, accepting the licenses.
 				<img src="img/project_screenshot2.png" style="width: 100%" /><br/>
+				3. When finished installing, restart if asked and head over to C:/NVPACK/android-sdk-windows/ and open SDK Manager.exe<br/>
+				Scroll down until you find Android 7.0 (API 24) and check it. Click install packages on the bottom right, accepting the licenes.<br/>
+				<span class="orange-text">Note: For a faster download time/less space open the Android 7.0 dropdown and only selecting "SDK Platform, Google APIs, and Sources for Android SDK."</span><br/>
+				<img src="img/project_screenshot3.png" style="width: 100%" /><br/>
+				<h4 class="header">Part 2: Creating the project</h4>
+				1. Create a new blank blueprint project with mobile/scalable/no starter content.<br/>
+				<img src="img/project_screenshot4.png" style="width: 100%" /><br/>
+				2. Copy the controller plugin from your empty C++ project created earlier and paste it into the Plugins folder of this project.<br/>
+				<img src="img/project_screenshot5.png" style="width: 100%" /><br/>
+				3. Go to Edit-&gt;Project Settings<br/>
+				<br/>
+				4. Engine-&gt;Input: Click "Default Touch Interface" and click "Clear"<br/>
+				<img src="img/project_screenshot7.png" style="width: 100%" onMouseOver="this.src='img/project_screenshot7_hover.png'" onMouseOut="this.src='img/project_screenshot7.png'" /><br/>
+				5. Platforms-&gt;Android: Click both "Configure Now" buttons in the red boxes.<br/>
+				<img src="img/project_screenshot8.png" style="width: 100%" onMouseOver="this.src='img/project_screenshot8_hover.png'" onMouseOut="this.src='img/project_screenshot8.png'" /><br/>
+				Set the package name, SDK versions to 24, and enable fullscreen immersive.<br/>
+				<img src="img/project_screenshot9.png" style="width: 100%" /><br/>
+				Check "arm64".<br/>
+				<img src="img/project_screenshot10.png" style="width: 100%" /><br/>
+				Check "Configure for deployment to Daydream" and "Configure GoogleVR Deployment Mode" to "Daydream".<br/>
+				<span class="orange-text">Note: You can also enable sustained-performance mode which will allow the app to run longer without overheating.</span><br/>
+				<img src="img/project_screenshot11.png" style="width: 100%" /><br/>
+				6. Platforms-&gt;Android SDK: Select the folder for each item, and the SDK API levels to "android-24"<br/>
+				<img src="img/project_screenshot12.png" style="width: 100%" /><br/>
+				7. Close out of that window and go to Edit-&gt;Plugins.<br/>
+				<br/>
+				8. Built-In: Virtual Reality: Disable everything but Google VR.<br/>
+				<img src="img/project_screenshot15.png" style="width: 100%" /><br/>
+				9. Project (at the bottom): Input Devices: Check Google VR Motion Controller.<br/>
+				<img src="img/project_screenshot16.png" style="width: 100%" /><br/>
+				10. Close out of the Plugins window and create a folder called "Blueprints" and a new blueprint named "VRCharacter".<br/>
+				<img src="img/project_screenshot17.png" style="width: 100%" /><br/>
+				11. Click Add Component, "Camera", and move it up a bit.</br>
+				<img src="img/project_screenshot18.png" style="width: 100%" /><br/>
+				12. Minimize that window and create a new Gamemode called "VRGamemode".<br/>
+				<img src="img/project_screenshot19.png" style="width: 100%" /><br/>
+				14. Set the Default Pawn Class to VRCharacter.<br/>
+				<img src="img/project_screenshot20.png" style="width: 100%" /><br/>
+				15. In World Settings, set the GameMode Override to VRGamemode.<br/>
+				<span class="orange-text">Note: If you do not see this tab go to Window-&gt;World Settings.</span><br/>
+				<img src="img/project_screenshot21.png" style="width: 100%" /><br/>
+				16. Make a new folder called Maps outside of the Blueprints folder and save the map inside.<br/>
+				<img src="img/project_screenshot22.png" style="width: 100%" /><br/>
+				<span style="font-size: 22px;">Congrats! You have created the base project!</span><br/>
+				<a class="waves-effect waves-light btn blue" href="pointer.html">Move on to the next tutorial</a><br/><br/><br/>
 			</div>
 		</main>
 		

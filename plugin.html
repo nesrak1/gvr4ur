@@ -46,17 +46,18 @@
 			<li class="bold"><a href="other.html" class="waves-effect waves-blue">Other things</a></li>
 		</ul>
 		<header>
-		<nav>
-			<div class="nav-wrapper blue" style="height: 78px; padding-top: 8px;">
-				<a class="brand-logo center noselect" style="font-size: 42px; cursor: default;">Google VR for Unreal Docs</a>
-			</div>
-		</nav>
+			<nav>
+				<div class="nav-wrapper blue" style="height: 78px; padding-top: 8px;">
+					<a class="brand-logo center noselect" style="font-size: 42px; cursor: default;">Google VR for Unreal Docs</a>
+				</div>
+			</nav>
 		</header>
 		
 		<main>
 			<div class="container">
 				<h2 class="header">Rebuilding the plugin</h2>
-				Google has their own branch of the unreal engine in 4.13. It currently contains updated versions of the Google VR plugin. To use the pointer, we must use that version. We are currently at version 4.14, and later 4.15. Instead of waiting hours to compile (depending on your computer) and trying to update the branch, we can just update the plugin.<br/><br/>
+				<blockquote style="border-left: 5px solid #2196F3 !important;">The Dayream integration with Unreal, it works out of the box with all the interfaces that you're already familiar with. So there's nothing new to learn you can just jump right in and start creating experiences with the tools from UE4.</blockquote>
+				Google has their own branch of the unreal engine in 4.13. It currently contains updated version of the Google VR plugin, 1.1. Unreal 4.14 currently has 1.01, without the controller (isn't that stupid?). To use the pointer, we must use that version 1.1 of the controller plugin. It's faster, easier, and better to do it this way.<br/><br/>
 				<div class="divider"></div><br/>
 				1. Make sure you have Github linked with Unreal and <a href="https://github.com/googlevr-unreal/UnrealEngine/tree/4.13-googlevr">download Google's branch of Unreal.</a>
 				<img src="img/plugin_screenshot1.png" style="width: 100%" /><br/>
@@ -67,7 +68,7 @@
 				4. Copy the GoogleVRController folder into the Plugins folder of your project.<br/>
 				<span class="orange-text">Note: If a Plugins folder does not exist, create it.</span><br/>
 				<img src="img/plugin_screenshot4.png" style="width: 100%" /><br/>
-				5. Open Visual Studio and build the project.<br/>
+				5. File-&gt;Open Visual Studio and build the project.<br/>
 				<span class="orange-text">Note: If the Plugins folder is not showing in Visual Studio, you may need to Rescan Solution and/or restart VS/Unreal</span><br/>
 				<img src="img/plugin_screenshot5.png" style="width: 100%" /><br/>
 				<div class="divider"></div><br/>
